@@ -1,0 +1,139 @@
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+header{
+	background-color: #333;
+	height: 10em;
+	color: #FFF;
+}
+
+header h1{
+	font-size: 2em;
+    text-align: center;
+    padding: 10px;
+}
+
+p{
+	font-size: 2em;
+}
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+section h2{
+	font-size: 3em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+
+
+
+header h1{
+    text-align: center;
+}
+
+
+#nomeUsu{
+	color: fff;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+.alert-box {
+    background-color: #f8d7da; /* Padrão: Erro */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px 40px 15px 15px; /* Ajusta o padding para o ícone e o botão */
+    border-radius: 8px; /* Cantos um pouco mais arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    display: flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+
+    /* Animação */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.alert-box.hidden {
+    opacity: 0;
+    transform: translateY(-25px);
+    pointer-events: none; /* Desabilita cliques enquanto está desaparecendo */
+}
+
+.alert-box .icon {
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+.alert-box p {
+    margin: 0;
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px; /* Tamanho maior para o 'x' */
+    line-height: 1;
+    color: inherit; /* Hereda a cor do texto do .alert-box */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    right: 15px;
+    transform: translateY(-50%); /* Ajuste final para centralizar */
+    cursor: pointer;
+    outline: none;
+    padding: 0; /* Remove padding padrão do botão */
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #444; /* Cor mais escura no hover */
+}
+
+/* Cores para Tipos de Alerta */
+.alert-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+.alert-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+.alert-box.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+}
+.alert-box.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+/* Adicione esta regra ao seu CSS */
+.alert-box.hidden {
+opacity: 0;
+visibility: hidden;
+transform: translateY(-25px);
+pointer-events: none;
+}
+
+/* Remova a classe .hidden que estava dentro do .alert-box.hidden no CSS anterior, pois agora o alert-box não começa com essa classe.
+No entanto, a sua classe .alert-box.hidden continua a ser usada para esconder o alerta com animação. */

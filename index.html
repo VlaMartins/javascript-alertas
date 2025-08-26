@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <p> Que bom te ver por aqui   <span id="nomeUsu"></span>  </p>
+		<h1>Aprendendo JavaScript </h1>
+	</header>
+	
+
+
+	<button class="show-alert-btn" data-target="alert-success">Inscrição realizada com sucesso! </button>
+	<button class="show-alert-btn" data-target="alert-warning">Mostrar Alerta de Aviso</button>
+	<button class="show-alert-btn" data-target="alert-info">Mostrar Alerta de Informação</button>
+	<button class="show-alert-btn" data-target="alert-error">Mostrar Alerta de Erro</button>
+
+	<div id="alert-success" class="alert-box success hidden">
+		<i class="fas fa-check-circle icon"></i>
+		<p>Sucesso! Seu perfil foi atualizado com êxito.</p>
+		<button class="close-btn">&times;</button>
+	</div>
+
+	<div id="alert-warning" class="alert-box warning hidden">
+		<i class="fas fa-exclamation-triangle icon"></i>
+		<p>Atenção: Existem campos obrigatórios não preenchidos.</p>
+		<button class="close-btn">&times;</button>
+	</div>
+
+	<div id="alert-info" class="alert-box info hidden">
+		<i class="fas fa-info-circle icon"></i>
+		<p>Dica: Você pode arrastar e soltar arquivos aqui.</p>
+		<button class="close-btn">&times;</button>
+	</div>
+
+	<div id="alert-error" class="alert-box error hidden">
+		<i class="fas fa-times-circle icon"></i>
+		<p>Erro: Não foi possível carregar os dados. Tente novamente.</p>
+		<button class="close-btn">&times;</button>
+	</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
